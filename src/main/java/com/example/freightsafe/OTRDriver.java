@@ -1,6 +1,6 @@
 package com.example.freightsafe;
 
-public class OTRDriver extends Driver{
+public class OTRDriver extends Driver implements DriverQualifications{
     private double payRate;
     private double startOdometer;
     private double endOdometer;
@@ -42,5 +42,33 @@ public class OTRDriver extends Driver{
 
     public void setEndOdometer(double endOdometer) {
         this.endOdometer = endOdometer;
+    }
+
+    @Override
+    public int checkHours() {
+        return 0;
+    }
+
+    @Override
+    public boolean checkCredentials() {
+        return false;
+    }
+
+    @Override
+    public boolean checkAge() {
+        if(isUnder21()){
+            return false;
+        }
+        return true;
+    }
+
+    @Override
+    public void addDriver(Driver d) {
+
+    }
+
+    @Override
+    public Driver removeDriver() {
+        return null;
     }
 }

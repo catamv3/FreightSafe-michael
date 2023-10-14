@@ -2,7 +2,7 @@ package com.example.freightsafe;
 
 
 //maybe this sgould b abstract
-public class Driver implements DriverQualifications {
+public class Driver {
     private String name;
     private int licenseNum;
     private int phoneNum;
@@ -78,28 +78,5 @@ public class Driver implements DriverQualifications {
         isAvailable = available;
     }
 ////////////////////////////// IMPLEMENT
-    @Override
-    public int checkHours() {
-        return 0;
-    }
 
-    @Override
-    public boolean checkCredentials() {
-        return false;
-    }
-
-    @Override
-    public boolean checkAge() {
-        return false;
-    }
-
-    @Override
-    public void addDriver(Driver d) {
-
-    }
-
-    @Override
-    public Driver removeDriver() {
-        return null;
-    }
 }
