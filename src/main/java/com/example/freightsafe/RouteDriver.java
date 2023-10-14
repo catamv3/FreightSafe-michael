@@ -1,6 +1,6 @@
 package com.example.freightsafe;
 
-public class RouteDriver {
+public class RouteDriver extends Driver {
     private double payRate;
     private double startTime;
     private double endTime;

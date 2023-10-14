@@ -1,9 +1,10 @@
 package com.example.freightsafe;
 
-public class OTRDriver {
+public class OTRDriver extends Driver{
     private double payRate;
     private double startOdometer;
     private double endOdometer;
+    //paid per mile
 
     public OTRDriver() {
         payRate = 0.0;
