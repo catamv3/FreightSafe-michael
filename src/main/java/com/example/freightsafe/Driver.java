@@ -11,6 +11,7 @@ public class Driver {
     private boolean under21;
     private double hoursDriven;
     private boolean isAvailable;
+    private boolean hasTakenBreak;
 
 
 
@@ -74,6 +75,11 @@ public class Driver {
         return isAvailable;
     }
 
+    public boolean getHasTakenBreak(){return hasTakenBreak;}
+
+    public void setHasTakenBreak(boolean bbreak){
+        hasTakenBreak = bbreak;
+    }
     public void setAvailable(boolean available) {
         isAvailable = available;
     }

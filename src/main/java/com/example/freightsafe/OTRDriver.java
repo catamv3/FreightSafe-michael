@@ -44,10 +44,21 @@ public class OTRDriver extends Driver implements DriverQualifications{
         this.endOdometer = endOdometer;
     }
 
+    /**
+     * This method checks to make sure the driver has not passed
+     * 8.5 hours of driving.
+     * @return false if the driver has been driving more than 8,5 hours
+     * without taking a break;
+     */
     @Override
-    public int checkHours() {
-        return 0;
+    public boolean checkHours() {
+        //check hours
+        if((getHoursDriven() >= 8.5) && !getHasTakenBreak())
+            return false;
+        return true;
     }
+
+
 
     @Override
     public boolean checkCredentials() {
@@ -62,13 +73,16 @@ public class OTRDriver extends Driver implements DriverQualifications{
         return true;
     }
 
-    @Override
-    public void addDriver(Driver d) {
+    //since we're not storing a collection of drivers, maybe this
+    //method should be used in the controller classes.
 
-    }
-
-    @Override
-    public Driver removeDriver() {
-        return null;
-    }
+//    @Override
+//    public void addDriver(Driver d) {
+//
+//    }
+//
+//    @Override
+//    public Driver removeDriver() {
+//        return null;
+//    }
 }
